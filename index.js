@@ -25,6 +25,11 @@ app.get('/:color', (req, res) => {
 </body>`)
 })
 
+app.post('/:color', (req, res) => {
+    let myColor = req.params.color
+    res.send(`My favorite color is ${myColor}`)
+})
+
 
 app.listen(process.env.PORT , () => {
     console.log(` you have been connected to the app. running on ${process.env.PORT}`)
